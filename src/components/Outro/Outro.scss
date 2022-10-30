@@ -1,0 +1,38 @@
+.Outro {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+  padding: 1rem 0;
+  background-color: #000;
+
+  &__line {
+    width: 8%;
+    height: 2px;
+    background-color: #fff;
+    transform: rotate(90deg);
+    margin-bottom: 4rem;
+  }
+  p {
+    text-align: center;
+    a {
+      color: rgba(255, 255, 255, 0.3);
+      &:hover {
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+  }
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 0 auto;
+    @media screen and (max-width:500px) {
+      flex-wrap: wrap;
+    }
+  }
+}

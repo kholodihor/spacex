@@ -1,0 +1,76 @@
+.InfoSlider {
+  height: 100vh;
+  &__slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    padding: 4rem 2rem;
+    overflow: hidden;
+    z-index: 999;
+
+
+    &-info {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      text-align: left;
+
+      @media screen and (max-width: 600px) {
+        grid-column: 12 span;
+      }
+
+    }
+  }
+
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.7);
+  }
+
+  .swiper-pagination-bullet-active {
+    color: rgba(255, 255, 255, 1);
+    background: rgba(255, 255, 255, 1);
+  }
+  .prev {
+    position: absolute;
+    top: 90%;
+    left: 5%;
+    width: 1rem;
+    height: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 9999;
+    i {
+      font-size: 1.8rem;
+      color: rgba(255, 255, 255, 0.3);
+    }
+    &:hover i {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+  .next {
+    position: absolute;
+    top: 90%;
+    left: 90%;
+    width: 1rem;
+    height: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 9999;
+    @media screen and (max-width: 600px) {
+      left: 85%;
+    }
+    i {
+      font-size: 1.8rem;
+      color: rgba(255, 255, 255, 0.3);
+    }
+    &:hover i {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.Button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.3em 3.5em;
+  font-size: 0.8em;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 0;
+
+  @media screen and (max-width: 500px) {
+    padding: 1em;
+    font-size: 0.7em;
+  }
+
+  span {
+    color: #fff;
+    transition: 0.5s ease-in-out;
+    z-index: 1;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 110%;
+    background-color: #fff !important;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.4s ease-in-out;
+    z-index: -1;
+  }
+  &:hover::before {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  &:hover span {
+    color: #000;
+  }
+}

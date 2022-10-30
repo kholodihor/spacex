@@ -1,0 +1,35 @@
+.Nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.9em;
+  font-weight: 600;
+  text-transform: uppercase;
+  @media screen and (max-width: 1050px) {
+    font-size: 0.8em;
+  }
+
+  a {
+    position: relative;
+    padding: 0.2rem;
+    white-space: nowrap;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: #fff;
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      width: 100%;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease-in;
+    }
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.Title {
+  text-align: left;
+  padding: 0.5rem 0;
+  h1 {
+    font-size: 2.9em;
+    font-weight: 600;
+    text-transform: uppercase;
+    @media screen and (max-width: 850px) {
+      font-size: 2em;
+    }
+    
+    @media screen and (max-width:400px) {
+      font-size: 1.5rem;
+    }
+  }
+  h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.3em;
+    font-weight: 400;
+    text-transform: uppercase;
+    @media screen and (max-width: 850px) {
+      font-size: 1em;
+    }
+  }
+}
