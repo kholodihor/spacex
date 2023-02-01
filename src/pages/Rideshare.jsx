@@ -1,11 +1,13 @@
-import React from 'react';
-import { Intro, Tabs, Advantages, Pricing } from '../components';
+import Intro from '../components/sections/Intro/Intro';
+import Tabs from '../components/sections/Tabs/Tabs';
+import Advantages from '../components/sections/Advantages/Advantages';
+import Pricing from '../components/sections/Pricing/Pricing';
 import background from '../assets/rideshare/background.webp';
 import tabsection from '../store/rideshare/tabsection';
 
 const Rideshare = () => {
   return (
-    <div className="Rideshare Page">
+    <div className="Rideshare Page" data-testid="rdeshare">
       <Intro
         background={background}
         title={'Smallsat Rideshare Program'}

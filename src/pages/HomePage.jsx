@@ -1,13 +1,15 @@
 import React from 'react';
-import HomeSection from '../components/HomeSection/HomeSection';
+import HomeSection from '../components/sections/HomeSection/HomeSection';
 import sections from '../store/homepage.js';
 
 const Home = () => {
   return (
     <div>
-      <HomeSection sections={sections} />
+      {sections.map((section, index) => (
+        <HomeSection key={index} section={section} />
+      ))}
     </div>
   );
 };
 
-export { Home };
+export default Home;

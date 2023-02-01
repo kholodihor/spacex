@@ -1,13 +1,11 @@
-import React from 'react';
-import {
-  Intro,
-  Counter,
-  InfoSlider,
-  Video,
-  Tabs,
-  Inspace,
-  ImageSlider
-} from '../../components';
+import Intro from '../../components/sections/Intro/Intro';
+import Video from '../../components/sections/Video/Video';
+import Tabs from '../../components/sections/Tabs/Tabs';
+import Inspace from '../../components/sections/Inspace/Inspace';
+import Counter from '../../components/elements/Counter/Counter';
+import InfoSlider from '../../components/sections/InfoSlider/InfoSlider';
+import ImageSlider from '../../components/sections/ImageSlider/ImageSlider';
+import background from '../../assets/dragon/background.webp';
 import {
   tabsection,
   parallaxslide,
@@ -15,13 +13,8 @@ import {
   tabsslide,
   counter,
   imageslider,
+  sources,
 } from '../../store/dragon';
-import background from '../../assets/dragon/background.webp';
-
-const jpgSrc = 'https://img.youtube.com/vi/78ATfCaBn6E/maxresdefault.jpg';
-const webpSrc =
-  'https://img.youtube.com/vi_webp/78ATfCaBn6E/maxresdefault.webp';
-const videoSrc = 'https://www.youtube.com/embed/78ATfCaBn6E';
 
 const Dragon = () => {
   return (
@@ -29,7 +22,7 @@ const Dragon = () => {
       <Intro
         background={background}
         title={'dragon'}
-        subtitle={'   Sending humans and cargo into space'}
+        subtitle={'Sending humans and cargo into space'}
       />
       <Counter data={counter} />
       <InfoSlider
@@ -40,9 +33,9 @@ const Dragon = () => {
         subtitle={'dragon'}
       />
       <Video
-        imgSrc={jpgSrc}
-        webpSrc={webpSrc}
-        videoSrc={videoSrc}
+        imgSrc={sources.jpgSrc}
+        webpSrc={sources.webpSrc}
+        videoSrc={sources.videoSrc}
         title={'crew dragon interior'}
       />
       <Inspace />

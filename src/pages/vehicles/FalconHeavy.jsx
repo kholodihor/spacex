@@ -1,29 +1,22 @@
 import React from 'react';
-import {
-  Intro,
-  Counter,
-  InfoSlider,
-  Video,
-  Tabs,
-  Performance,
-  ImageSlider,
-  Outro
-} from '../../components';
+import Intro from '../../components/sections/Intro/Intro';
+import InfoSlider from '../../components/sections/InfoSlider/InfoSlider';
+import Video from '../../components/sections/Video/Video';
+import Tabs from '../../components/sections/Tabs/Tabs';
+import Performance from '../../components/sections/Performance/Performance';
+import ImageSlider from '../../components/sections/ImageSlider/ImageSlider';
+import Outro from '../../components/sections/Outro/Outro';
+import Counter from '../../components/elements/Counter/Counter';
+import background from '../../assets/falcon-heavy/background.webp';
 import {
   parallaxslide,
   slides,
   tabsslide,
   counter,
   imageslider,
-  tabsection
+  tabsection,
+  sources,
 } from '../../store/falcon-heavy';
-import background from '../../assets/falcon-heavy/background.webp';
-
-
-const jpgSrc = 'https://img.youtube.com/vi/A0FZIwabctw/maxresdefault.jpg';
-const webpSrc =
-  'https://img.youtube.com/vi_webp/A0FZIwabctw/maxresdefault.webp';
-const videoSrc = 'https://www.youtube.com/embed/A0FZIwabctw';
 
 const FalconHeavy = () => {
   return (
@@ -31,7 +24,7 @@ const FalconHeavy = () => {
       <Intro
         background={background}
         title={'falcon heavy'}
-        subtitle={'The world’s most powerful rocket'}
+        subtitle={'The world`s most powerful rocket'}
       />
       <Counter data={counter} />
       <InfoSlider
@@ -42,9 +35,9 @@ const FalconHeavy = () => {
         subtitle={'falcon heavy'}
       />
       <Video
-        imgSrc={jpgSrc}
-        webpSrc={webpSrc}
-        videoSrc={videoSrc}
+        imgSrc={sources.jpgSrc}
+        webpSrc={sources.webpSrc}
+        videoSrc={sources.videoSrc}
         title={'Falcon Heavy First Flight'}
       />
       <Performance />

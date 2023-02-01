@@ -1,8 +1,6 @@
 import bg1 from '../assets/homepage/bg1.webp';
 import bg2 from '../assets/homepage/bg2.webp';
 import bg3 from '../assets/homepage/bg3.webp';
-import bg4 from '../assets/homepage/bg4.webp';
-import bg5 from '../assets/homepage/bg5.webp';
 import bg6 from '../assets/homepage/bg6.webp';
 import bg7 from '../assets/homepage/bg7.webp';
 import bg8 from '../assets/homepage/bg8.webp';
@@ -51,16 +49,7 @@ const sections = [
     button: 'rewatch',
     background: bg3,
   },
-  {
-    title: 'starship update',
-    button: 'rewatch',
-    background: bg4,
-  },
-  {
-    title: 'Starship to Land NASA Astronauts on the Moon',
-    button: 'learn more',
-    background: bg5,
-  },
+
 ];
 
 export default sections;

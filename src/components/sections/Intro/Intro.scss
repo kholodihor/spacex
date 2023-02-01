@@ -1,0 +1,30 @@
+.Intro {
+  height: 100vh;
+  position: relative;
+  margin-bottom: -0.5rem;
+
+  &__title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+
+    h1 {
+      font-size: 5em;
+      letter-spacing: -1px;
+      text-transform: uppercase;
+
+      @media screen and (max-width: 800px) {
+        font-size: 4em;
+      }
+    }
+    h3 {
+      font-size: 1.1em;
+      font-weight: 300;
+      text-transform: uppercase;
+      @media screen and (max-width: 800px) {
+        font-size: 0.9em;
+      }
+    }
+  }
+}

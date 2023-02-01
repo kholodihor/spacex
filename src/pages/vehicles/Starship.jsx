@@ -1,13 +1,11 @@
-import React from 'react';
-import {
-  Intro,
-  InfoSlider,
-  Video,
-  Tabs,
-  ImageSlider,
-  Satellites,
-  Landing,
-} from '../../components';
+import Intro from '../../components/sections/Intro/Intro';
+import Video from '../../components/sections/Video/Video';
+import Tabs from '../../components/sections/Tabs/Tabs';
+import Landing from '../../components/sections/Landing/Landing';
+import ImageSlider from '../../components/sections/ImageSlider/ImageSlider.jsx';
+import InfoSlider from '../../components/sections/InfoSlider/InfoSlider';
+import Satellites from '../../components/sections/Satellites/Satellites';
+import background from '../../assets/starship/background.webp';
 import {
   parallaxslide,
   slides,
@@ -15,13 +13,8 @@ import {
   satellites,
   imageslider,
   tabsection,
+  sources,
 } from '../../store/starship';
-import background from '../../assets/starship/background.webp';
-
-const jpgSrc = 'https://img.youtube.com/vi/sOpMrVnjYeY/maxresdefault.jpg';
-const webpSrc =
-  'https://img.youtube.com/vi_webp/sOpMrVnjYeY/maxresdefault.webp';
-const videoSrc = 'https://www.youtube.com/embed/sOpMrVnjYeY';
 
 const Starship = () => {
   return (
@@ -39,9 +32,9 @@ const Starship = () => {
         subtitle={''}
       />
       <Video
-        imgSrc={jpgSrc}
-        webpSrc={webpSrc}
-        videoSrc={videoSrc}
+        imgSrc={sources.jpgSrc}
+        webpSrc={sources.webpSrc}
+        videoSrc={sources.videoSrc}
         title={'starship update'}
       />
       <Satellites satellites={satellites} />
