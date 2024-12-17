@@ -10,6 +10,9 @@ const Performance = () => {
           autoPlay
           muted
           loop
+          playsInline
+          loading="lazy"
+          preload="none"
           data-testid="video"
         ></video>
       </div>

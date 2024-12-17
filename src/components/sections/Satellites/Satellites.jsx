@@ -1,11 +1,31 @@
-import React from 'react';
-import './Satellites.scss';
+import React, { memo } from 'react';
+import PropTypes from 'prop-types';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Scrollbar, A11y, Navigation } from 'swiper';
-import PropTypes from 'prop-types';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import './Satellites.scss';
+
+const SatelliteSlide = memo(({ slide }) => (
+  <div className="Satellites__slide">
+    <div className="Satellites__slide-info">
+      <h2>{slide.subtitle}</h2>
+      <h1>{slide.title}</h1>
+      <p>{slide.text}</p>
+    </div>
+    <div className="Satellites__slide-image">
+      <img 
+        src={slide.img} 
+        alt={slide.subtitle}
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+  </div>
+));
+
+SatelliteSlide.displayName = 'SatelliteSlide';
 
 const Satellites = (props) => {
   return (
@@ -21,22 +41,11 @@ const Satellites = (props) => {
       }}
     >
       {React.Children.toArray(
-        props.satellites.map((slide, index) => {
-          return (
-            <SwiperSlide key={index}>
-              <div className="Satellites__slide">
-                <div className="Satellites__slide-info">
-                  <h2>{slide.subtitle}</h2>
-                  <h1>{slide.title}</h1>
-                  <p>{slide.text}</p>
-                </div>
-                <div className="Satellites__slide-image">
-                  <img src={slide.img} alt={slide.subtitle} />
-                </div>
-              </div>
-            </SwiperSlide>
-          );
-        })
+        props.satellites.map((slide) => (
+          <SwiperSlide key={slide.subtitle}>
+            <SatelliteSlide slide={slide} />
+          </SwiperSlide>
+        ))
       )}
 
       <div className="prev">
@@ -57,4 +66,4 @@ Satellites.defaultProps = {
   satellites: [],
 };
 
-export default Satellites;
+export default memo(Satellites);

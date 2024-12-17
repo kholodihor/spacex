@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../../elements/Button/Button';
+import Timeline from '../../elements/Timeline/Timeline';
 import pricing from '../../../assets/rideshare/pricing.webp';
 import { steps } from '../../../store/steps';
 import './Pricing.scss';
@@ -20,7 +21,7 @@ const Pricing = () => {
           <br />
           <br />
           Payloads are received at the launch site around L-30 and processed in
-          a SpaceX facility. More details can be found in the Rideshare User’s
+          a SpaceX facility. More details can be found in the Rideshare User's
           Guide.
         </p>
         <Button
@@ -28,13 +29,8 @@ const Pricing = () => {
           style={{ paddingLeft: '1rem', paddingRight: '1rem' }}
         />
       </div>
-      <div className="Pricing__progressbar">
-        {steps.map((step, index) => (
-          <div key={index} className="step" data-testid="step">
-            <span>{step}</span>
-            <div className="circle"></div>
-          </div>
-        ))}
+      <div className="Pricing__timeline">
+        <Timeline steps={steps} />
       </div>
     </section>
   );
