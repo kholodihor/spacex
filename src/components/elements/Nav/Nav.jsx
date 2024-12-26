@@ -15,7 +15,7 @@ const Nav = () => {
       <li>
         <span>
           <a
-            href="https://starlink-blond.vercel.app/"
+            href="https://coldstarlink.netlify.app/"
             rel="noreferrer noopener"
             target="_blank"
           >
