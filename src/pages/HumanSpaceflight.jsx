@@ -2,7 +2,7 @@ import Intro from '../components/sections/Intro/Intro';
 import Planet from '../components/sections/Planet/Planet';
 import Outro from '../components/sections/Outro/Outro';
 import background from '../assets/human-spaceflight/background.webp';
-import planets from '../store/planets';
+import planets from '../data/planets';
 
 const HumanSpaceflight = () => {
   return (

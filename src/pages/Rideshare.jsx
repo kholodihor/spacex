@@ -3,7 +3,7 @@ import Tabs from '../components/sections/Tabs/Tabs';
 import Advantages from '../components/sections/Advantages/Advantages';
 import Pricing from '../components/sections/Pricing/Pricing';
 import background from '../assets/rideshare/background.webp';
-import tabsection from '../store/rideshare/tabsection';
+import tabsection from '../data/rideshare/tabsection';
 
 const Rideshare = () => {
   return (

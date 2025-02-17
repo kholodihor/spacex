@@ -1,6 +1,6 @@
 import React from 'react';
-import cards from '../../../store/rideshare/cards';
-import { steps } from '../../../store/steps';
+import cards from '../../../data/rideshare/cards';
+import { steps } from '../../../data/steps';
 import Timeline from '../../elements/Timeline/Timeline';
 import './Advantages.scss';
 

@@ -12,17 +12,21 @@ export const links = [
 ];
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
+  
   return (
-    <ul className="Footer">
-      <li>
-        <span data-testid="copy">SpaceX &copy; 2022</span>
-      </li>
-      {links.map((link, index) => (
-        <li data-testid="li">
-          <span>{link}</span>
+    <footer>
+      <ul className="Footer">
+        <li>
+          <span>SpaceX {currentYear}</span>
         </li>
-      ))}
-    </ul>
+        {links.map((link, index) => (
+          <li key={index}>
+            <span>{link}</span>
+          </li>
+        ))}
+      </ul>
+    </footer>
   );
 }
 

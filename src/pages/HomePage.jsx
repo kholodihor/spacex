@@ -1,6 +1,6 @@
 import React from 'react';
 import HomeSection from '../components/sections/HomeSection/HomeSection';
-import sections from '../store/homepage.js';
+import sections from '../data/homepage.js';
 
 const Home = () => {
   return (

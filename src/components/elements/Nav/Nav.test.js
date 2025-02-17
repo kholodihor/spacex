@@ -1,6 +1,6 @@
 import {render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import { links } from '../../../store/nav';
+import { links } from '../../../data/nav';
 import Nav from './Nav';
 
 describe('renders Nav section correctly', () => {

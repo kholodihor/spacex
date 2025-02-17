@@ -14,7 +14,7 @@ import {
   counter,
   imageslider,
   sources,
-} from '../../store/falcon9';
+} from '../../data/falcon9';
 
 function Falcon9() {
   return (

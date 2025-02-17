@@ -14,7 +14,7 @@ import {
   imageslider,
   tabsection,
   sources,
-} from '../../store/starship';
+} from '../../data/starship';
 
 const Starship = () => {
   return (

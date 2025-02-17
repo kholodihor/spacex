@@ -16,7 +16,7 @@ import {
   imageslider,
   tabsection,
   sources,
-} from '../../store/falcon-heavy';
+} from '../../data/falcon-heavy';
 
 const FalconHeavy = () => {
   return (

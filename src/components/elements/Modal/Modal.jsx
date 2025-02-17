@@ -11,12 +11,13 @@ const Modal = ({ active, setActive, videoSrc }) => {
           className={active ? 'Modal Modal__active' : 'Modal'}
           onClick={() => setActive(false)}
         >
-          <div className="Modal__content" onClick={(e) => e.stopPropagation()}>
+          <div className="Modal__content" onClick={(e) => e.stopPropagation()} data-testid="modal-content">
             <div className="Modal__content-video">
               <iframe
                 name="spacex-video"
                 className="Modal__content-video--embed"
                 src={videoSrc}
+                title="SpaceX Video Content"
               ></iframe>
             </div>
             <div

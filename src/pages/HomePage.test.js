@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import sections from '../store/homepage.js';
+import sections from '../data/homepage.js';
 import HomePage from './HomePage';
 
 describe('HomePage test', () => {

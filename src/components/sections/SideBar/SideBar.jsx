@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { links, mobileLinks } from '../../../store/sidebar-links';
+import { links, mobileLinks } from '../../../data/sidebar-links';
 import './SideBar.scss';
 
 const SideBar = ({ active, setActive }) => {
@@ -51,7 +51,7 @@ SideBar.propTypes = {
 
 SideBar.defaultProps = {
   active: false,
-  setActive: () => {},
+  setActive: () => { },
 };
 
 export default SideBar;

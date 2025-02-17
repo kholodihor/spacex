@@ -5,13 +5,13 @@ import './Timeline.scss';
 const Timeline = ({ steps }) => {
   return (
     <div className="Timeline">
-      <div className="Timeline__line" />
-      <div className="Timeline__steps">
+      <div className="Timeline__line" data-testid="timeline-line" />
+      <div className="Timeline__steps" data-testid="timeline-steps">
         {steps.map((step, index) => (
-          <div key={index} className="Timeline__step">
+          <div key={index} className="Timeline__step" data-testid="timeline-step">
             <div className="Timeline__step-content">
               <div className="Timeline__step-text">{step}</div>
-              <div className="Timeline__step-circle" />
+              <div className="Timeline__step-circle" data-testid="timeline-step-circle" />
             </div>
           </div>
         ))}

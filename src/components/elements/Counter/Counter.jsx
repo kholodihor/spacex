@@ -6,7 +6,7 @@ import './Counter.scss';
 const Counter = ({ data }) => {
   return (
     <section className="Counter" data-testid="counter-page">
-      <VisibilitySensor partialVisibility offset={{ bottom: 200 }}>
+      <VisibilitySensor partialVisibility offset={{ bottom: 200 }} data-testid="visibility-sensor">
         {({ isVisible }) => (
           <ul>
             {data.map((item, index) => {

@@ -14,17 +14,18 @@ const Header = () => {
     setSidebarActive(!sidebarActive);
   };
 
-  const controlNavbar = () => {
-    if (typeof window !== 'undefined') {
-      if (window.scrollY > lastScrollY) {
-        setShow(false);
-      } else {
-        setShow(true);
-      }
-      setLastScrollY(window.scrollY);
-    }
-  };
+
   useEffect(() => {
+    const controlNavbar = () => {
+      if (typeof window !== 'undefined') {
+        if (window.scrollY > lastScrollY) {
+          setShow(false);
+        } else {
+          setShow(true);
+        }
+        setLastScrollY(window.scrollY);
+      }
+    };
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', controlNavbar);
       return () => {
@@ -34,18 +35,18 @@ const Header = () => {
   }, [lastScrollY]);
 
   return (
-    <header className={`Header active ${show && 'hidden'}`}>
-      <div className="Header__left">
-        <div className="Header__left-logo">
+    <header className={`Header active ${show && 'hidden'}`} role="banner">
+      <div className="Header__left" data-testid="header-left">
+        <div className="Header__left-logo" data-testid="header-logo">
           <Link to="/">
             <img src={logo} alt="logo"></img>
           </Link>
         </div>
-        <div className="Header__left-nav">
+        <div className="Header__left-nav" data-testid="header-nav">
           <Nav />
         </div>
       </div>
-      <div className="Header__right">
+      <div className="Header__right" data-testid="header-right">
         <ul>
           <li className="shop">
             <a

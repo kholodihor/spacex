@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '../../elements/Button/Button';
 import Timeline from '../../elements/Timeline/Timeline';
 import pricing from '../../../assets/rideshare/pricing.webp';
-import { steps } from '../../../store/steps';
+import { steps } from '../../../data/steps';
 import './Pricing.scss';
 
 const Pricing = () => {

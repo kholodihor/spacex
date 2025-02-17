@@ -14,7 +14,7 @@ import {
   counter,
   imageslider,
   sources,
-} from '../../store/dragon';
+} from '../../data/dragon';
 
 const Dragon = () => {
   return (

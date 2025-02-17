@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import planets from '../store/planets';
+import planets from '../data/planets';
 import HumanSpaceflight from './HumanSpaceflight';
 
 describe('HumanSpaceflight page test', () => {
